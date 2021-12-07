@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.carre {
+    height: 180px;
+    width: 180px;
+    background-color: red;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    flex-direction: column;
+    transition: 1.5s;
+}
+
+.active {
+    background-color: darkblue;
+    border-radius: 20px;
+    transform: scale(1.5);
+}
+
+#facebook{
+    background-color: #3B5998;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+#twitter{
+    background-color: #1DA1F2;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+#instagram{
+    background-color: #C32AA3;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.active .texte {
+    font-size: 1rem;
+}
+
+.active .icon{
+     transform: rotate(360deg);
+
+}
+h1 {
+    position: absolute;
+    z-index: 1;
+    top:200px;
+    color:white;
+    font-size: xx-large;
+    
+}
+.texte {
+    font-size: 0;
+    transition: 1.5s;
+}
+
+.icon {
+    color:white;
+    transition: 2s;
+  }
+
+
+  @media screen and (max-width : 1389px){
+    .carre {
+        height: 180px;
+        width: 180px; 
+        margin: 40px;
+    }
+    .active .texte {
+        font-size: 20px;
+    }
+  }  
+
+  @media screen and (max-width : 768px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }    
+    .carre {
+        height: 160px;
+        width: 160px;
+        margin: 40px; 
+    }
+    h1{
+        font-size: 0;
+    }
+  }
+
+
+  @media screen and (max-width : 740px){
+    body{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }    
+  }
+
+  @media screen and (max-width : 540px){
+    .carre {
+        height: 140px;
+        width: 140px; 
+    }
+    .active .texte {
+        font-size: 12px;
+        }
+  }
+  
+  @media screen and (max-width : 414px){
+    .carre {
+        height: 120px;
+        width: 120px; 
+    }
+    .active .texte {
+    font-size: 12px;
+    }
+    body{
+        gap: 20px;
+    }
+  }
+
+  @media screen and (max-width : 375px){
+    .carre {
+        height: 110px;
+        width: 110px; 
+    }
+    .active .texte {
+    font-size: 10px;
+    }
+    body{
+        gap: 20px;
+    }
+  }
